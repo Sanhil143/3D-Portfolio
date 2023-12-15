@@ -9,7 +9,11 @@ const Computers = () => {
     <mesh>
       <hemisphereLight intensity={0.15} groundColor="black" />
       <pointLight intensity={1} />
-      <primitive object={computer.scene} />
+      <primitive
+        object={computer.scene}
+        scale={0.75}
+        position={[0, -3.25, -1.5]}
+      />
     </mesh>
   );
 };
@@ -28,9 +32,9 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers/>
+        <Computers />
       </Suspense>
-      <Preload all/>
+      <Preload all />
     </Canvas>
   );
 };
